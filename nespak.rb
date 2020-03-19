@@ -8,7 +8,7 @@
  //  v1.0 - 12/14/12 - Added RLE/Huffman compressions
  //	 v1.1 - 12/28/13 - Ported to Ruby
  //
- //--------------------------------------------------------*/	
+ //--------------------------------------------------------*/
 =end
 
 VERSION = 1.1
@@ -41,7 +41,7 @@ class Nespak
 	def pack(input_path, output_path, algorithm)
 
 		# open input, convert to binary
-		in_file = File.read(input_path)	
+		in_file = File.read(input_path)
 		in_file.each_line do |line|
 			@pre << line.to_binary(@pre_size)
 		end
