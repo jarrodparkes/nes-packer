@@ -8,7 +8,7 @@
  //  v1.0 - 12/14/12 - Added RLE/Huffman compressions
  //	 v1.1 - 12/28/13 - Ported to Ruby
  //
- //--------------------------------------------------------*/	
+ //--------------------------------------------------------*/
 =end
 
 module Overrides
@@ -22,11 +22,11 @@ module Overrides
 	# open String class and add functionality
 	class ::String
 		def to_binary(chunk_size, endianness = nil)
-			self.chomp.to_i.to_s(2).rjust(chunk_size, '0') 
+			self.chomp.to_i.to_s(2).rjust(chunk_size, '0')
 		end
 	end
 
-	class ::Fixnum
+	class ::Integer
 		def to_binary(chunk_size)
 			self.to_s(2).rjust(chunk_size, '0')
 		end
